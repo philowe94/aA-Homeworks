@@ -21,3 +21,17 @@ function madlibs(word1, word2, word3) {
 }
 
 madlibs('make', 'best', 'guac')
+
+const isSubstring = (str1, str2) => {
+
+    for(i = 0; i < str1.length - str2.length; i++) {
+        if( str2 == str1.substring(i, i+str2.length) ) {
+            return true;
+        };
+    };
+    return false
+};
+
+console.log(isSubstring("time to program", "time")) //true
+
+console.log(isSubstring("Jump for joy", "joys")) //false

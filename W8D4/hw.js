@@ -7,4 +7,14 @@ function titleize(arr, callback) {
     callback(new_arr);
 };
 
-titleize(["Mary", "Brian", "Leo"], printCallback);
+// titleize(["Mary", "Brian", "Leo"], printCallback);
+
+function isPalindrome(string) {
+  function reverse() {
+    return string.split('').reverse().join('');
+  }
+
+  return string === reverse();
+}
+
+console.log(isPalindrome("bababasdb"))
